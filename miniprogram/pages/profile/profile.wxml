@@ -1,0 +1,55 @@
+<!--miniprogram/pages/profile/profile.wxml-->
+<navbar bgColor="#f8f8f8" defaultType="{{false}}">
+  <view slot="left">
+    <view class="message-wrap">
+      <image class="message-icon" src="./icon1.svg"></image>
+      <text class="message-count">0</text>
+    </view>
+  </view>
+</navbar>
+
+<view class="user-info">
+  <image src="./avatar.svg" class="avatar"></image>
+  <view class="user-text">
+    <view class="user-name">喂鸭梨</view>
+    <text class="bio">世界上最大的勇气，是压力下的优雅。</text>
+  </view>
+</view>
+
+<view class="statistic-wrap">
+  <view class="statistic-item">
+    <view class="statistic-count">100</view>
+    <view class="statistic-desc">摘录条数</view>
+  </view>
+  <view class="statistic-item">
+    <view class="statistic-count">100</view>
+    <view class="statistic-desc">摘录条数</view>
+  </view>
+</view>
+
+<view class="list-wrap">
+  <navigator url="/pages/import-weread/import-weread">
+    <view class="list-item">
+      <image src="./icon2.svg" class="list-icon"></image>
+      <text class="list-text">导入微信读书笔记</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/import-weread/import-weread">
+    <view class="list-item">
+      <image src="./icon3.svg" class="list-icon"></image>
+      <text class="list-text">邀请有礼</text>
+    </view>
+  </navigator>
+  <view class="list-item">
+    <image src="./icon4.svg" class="list-icon"></image>
+    <text class="list-text">使用教程</text>
+  </view>
+  <view class="list-item">
+    <image src="./icon5.svg" class="list-icon"></image>
+    <text class="list-text">意见反馈</text>
+  </view>
+  <view class="list-item">
+    <image src="./icon6.svg" class="list-icon"></image>
+    <text class="list-text">关于我们</text>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--components/navbar/navbar.wxml-->
+<view class="navbar-wrap" style="height:{{navHeight}}px">
+  <view class="navbar" style="height:{{navHeight}}px;background:{{bgColor}}">
+    <view class="status-bar" style="height:{{statusBarHeight}}px"></view>
+    <view class="navbar-main" style="height:{{navMainHeight}}px">
+      <view class="nav-left">
+        <text wx:if="{{defaultType}}" style="margin-left:{{customLeft*2}}px" class="iconfont icon-fanhui"></text>
+        <!-- <view wx:else class="custom-btn" style="width:{{customWidth}}px;height:{{customHeight}}px;border-radius:{{customHeight/2}}px;margin-left:{{customLeft*2}}px">
+          <view class="say-hello">早上好~</view>
+          <view class="app-name">Zento</view>
+        </view> -->
+        <view wx:else style="margin-left:{{customLeft*2}}px">
+          <slot name="left"></slot>
+        </view>
+      </view>
+      <view class="nav-center">
+        <slot name="title"></slot>
+      </view>
+      <view class="nav-right"></view>
+    </view>
+  </view>
+</view>

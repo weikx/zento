@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import "/assets/fonts/iconfont.wxss";
+@font-face {
+  font-family: myFontOne;
+  src: url('https://static.sagool.com/%E6%9D%A8%E4%BB%BB%E4%B8%9C%E7%AB%B9%E7%9F%B3%E4%BD%93.ttf');
+}
+page {
+  font-family: myFontOne;
+  background: #F8F8F8;
+}

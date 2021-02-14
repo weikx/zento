@@ -1,0 +1,62 @@
+<!--miniprogram/pages/bookshelf/bookshelf.wxml-->
+<navbar defaultType="{{false}}">
+  <view slot="left">
+    <view class="nav-switch">
+      <view class="{{checkedTab == 0 ? 'nav-switch__checked' : 'nav-switch__text'}}" bindtap="switchTab" data-index="0">书摘</view>
+      <view class="{{checkedTab == 1 ? 'nav-switch__checked' : 'nav-switch__text'}}" bindtap="switchTab" data-index="1">星标</view>
+    </view>
+  </view>
+</navbar>
+
+<view class="search-wrap">
+  <image src="./search-icon.svg" class="search-icon"></image>
+  <input type="text" class="search-input" placeholder="搜索书籍或书摘内容"/>
+</view>
+
+<scroll-view enable-flex scroll-y refresher-enabled bindrefresherrefresh="refresh" refresher-triggered="{{refresherTriggered}}" show-scrollbar="{{false}}" style="height: {{scrollViewHeight}}px">
+  <view class="books-wrap">
+    <view class="add-book">
+      <image src="./add-book.svg" class="add-icon"></image>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img3.doubanio.com/view/subject/s/public/s33663520.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img3.doubanio.com/view/subject/s/public/s29651121.jpg"></image>
+      <text class="book-name">挪威的森林挪威的森林挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img3.doubanio.com/view/subject/s/public/s27264181.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img9.doubanio.com/view/subject/s/public/s33734626.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img9.doubanio.com/view/subject/s/public/s29799055.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img9.doubanio.com/view/subject/s/public/s33513675.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img3.doubanio.com/view/subject/s/public/s1144911.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img1.doubanio.com/view/subject/s/public/s33734607.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img3.doubanio.com/view/subject/s/public/s29609111.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+    <view class="book">
+      <image class="book-img" src="https://img1.doubanio.com/view/subject/s/public/s33653407.jpg"></image>
+      <text class="book-name">挪威的森林</text>
+    </view>
+  </view>
+</scroll-view>

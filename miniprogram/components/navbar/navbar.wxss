@@ -1,0 +1,44 @@
+/* components/navbar/navbar.wxss */
+.navbar {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.status-bar {
+  /* background: yellow; */
+}
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: green; */
+}
+.custom-btn {
+  /* background: red; */
+}
+.nav-left {
+  flex: 1;
+  box-sizing: border-box;
+  /* background: cyan; */
+}
+.nav-center {
+  flex: 1;
+  text-align: center;
+  color: #4E4E4E;
+}
+.nav-right {
+  flex: 1;
+}
+.say-hello {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #828282;
+}
+.app-name {
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 0.1px;
+  line-height: 40px;
+}

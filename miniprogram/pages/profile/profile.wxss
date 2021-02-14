@@ -1,0 +1,91 @@
+/* miniprogram/pages/profile/profile.wxss */
+.message-wrap {
+  display: flex;
+  align-items: center;
+}
+.message-icon {
+  width: 60rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}
+.message-count {
+  color: #4E4E4E;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  width: 670rpx;
+  height: 200rpx;
+  margin: 0 auto;
+}
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.user-text {
+  margin-left: 30rpx;
+}
+.user-name {
+  font-size: 48rpx;
+  color: #4E4E4E;
+}
+.bio {
+  font-size: 24rpx;
+  color: #8C8C8C;
+}
+
+.statistic-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 670rpx;
+  height: 130rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+.statistic-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 48%;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.statistic-count {
+  font-size: 48rpx;
+  color: #4E4E4E;
+}
+.statistic-desc {
+  font-size: 22rpx;
+  color: #4E4E4E;
+  line-height: 50rpx;
+}
+
+.list-wrap {
+  width: 670rpx;
+  background: #fff;
+  box-shadow: 0px 0px 10rpx rgba(109, 128, 185, 0.05);
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  padding: 10rpx 0;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 40rpx;
+  font-size: 30rpx;
+  color: #4E4E4E;
+}
+.list-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 40rpx;
+}

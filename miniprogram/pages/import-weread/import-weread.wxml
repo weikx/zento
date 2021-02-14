@@ -1,0 +1,8 @@
+<!--miniprogram/pages/import-weread/import-weread.wxml-->
+<view class="wrap">
+  <view class="title">导入教程</view>
+  <view class="desc">第一步：在「微信读书」-「我」-「笔记」中复制读书笔记</view>
+  <view class="desc">第二步：点击下方「开始导入」按钮</view>
+  <image src="./logo.png" class="logo"></image>
+  <view class="button">开始导入</view>
+</view>
