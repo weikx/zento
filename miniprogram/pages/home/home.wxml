@@ -1,58 +1,28 @@
 <!--miniprogram/pages/home/home.wxml-->
-<navbar defaultType="{{false}}">
-  <text slot="title"></text>
-</navbar>
-<view class="top-bg"></view>
-
-<view class="control-bar">
-  <view class="control-item">
-    <image class="control-icon" src="./control1.svg"></image>
-    <text>记书摘</text>
-  </view>
-  <view class="control-item">
-    <image class="control-icon" src="./control2.svg"></image>
-    <text>记图片</text>
-  </view>
-  <view class="control-item">
-    <image class="control-icon" src="./control3.svg"></image>
-    <text>识文字</text>
-  </view>
+<view class="app-title">
+  知了笔记✨
 </view>
 
-<view class="title-bar">
-  <text class="title">最近添加</text>
-  <text class="more">查看更多</text>
-</view>
 
-<scroll-view scroll-x="true" bindscroll="scroll" class="books-banner">
-  <view class="banner-book">
-    <image class="book-img" src="https://img9.doubanio.com/view/subject/s/public/s33774084.jpg"></image>
-  </view>
-  <view class="banner-book">
-    <image class="book-img" src="https://img1.doubanio.com/view/subject/s/public/s33795167.jpg"></image>
-  </view>
-  <view class="banner-book">
-    <image class="book-img" src="https://img1.doubanio.com/view/subject/s/public/s33792628.jpg"></image>
-  </view>
-  <view class="banner-book">
-    <image class="book-img" src="https://img9.doubanio.com/view/subject/s/public/s33769015.jpg"></image>
-  </view>
-  <view class="banner-book">
-    <image class="book-img" src="https://img9.doubanio.com/view/subject/s/public/s33774084.jpg"></image>
-  </view>
-</scroll-view>
+<swiper indicator-dots="{{indicatorDots}}"
+  easing-function="easeOutCubic"
+  bindchange="change"
+  bindtransition="transition"
+  style="height:75vh"
+  previous-margin="50rpx"
+  next-margin="50rpx"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{background}}" wx:key="*this">
+    <swiper-item style="overflow: visible">
+      <view class="card">
+        <image src="./no-book.svg" class="nobook-icon"></image>
+        <view class="card-title">还没有添加笔记</view>
+        <view class="card-subtitle">添加笔记后可在首页进行回顾</view>
+        <view class="card-button" bindtap="onShowDialog">记一笔</view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
 
-<view class="title-bar">
-  <text class="title">笔记最多</text>
-</view>
 
-<view class="books-list">
-  <view class="list-book">
-    <view class="list-book__left">
-      <image class="book-img" src="https://img9.doubanio.com/view/subject/s/public/s33774084.jpg"></image>
-    </view>    
-    <view class="list-book__right">
-
-    </view>    
-  </view>
-</view>
+<dialog show="{{showDialog}}" input></dialog>

@@ -7,8 +7,9 @@
 }
 .nav-switch__checked {
   position: relative;
-  color: #4E4E4E;
+  color: var(--main-text-color-);
   font-size: 48rpx;
+  line-height: 55rpx;
   transform: all .3s;
 }
 .nav-switch__checked::after {
@@ -19,21 +20,29 @@
   display: block;
   width: 90rpx;
   height: 22rpx;
-  background: linear-gradient(0deg, #1EA2FC 0%, rgba(172, 221, 254, 0.369776) 61.68%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(0deg, #F9B198 0%, rgba(251, 201, 183, 0.697917) 30.73%, rgba(255, 255, 255, 0) 100%);
   border-radius: 10rpx;
   z-index: -1;
 }
 .nav-switch__text {
   font-size: 28rpx;
-  color: #8C8C8C;
+  color: var(--sub-text-color-);
   transform: all .3s;
   border: 15rpx solid transparent;
   border-top: 30rpx solid transparent;
   border-bottom: 0px;
 }
 
+.search-position {
+ width: 100vw;
+ height: 55px; 
+}
+
 .search-wrap {
-  position: relative;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  left: 0;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -44,8 +53,8 @@
 }
 .search-input {
   height: 70rpx;
-  width: 670rpx;
-  background: #F8F8F8;
+  width: 650rpx;
+  background: var(--page-bg-color-);
   border-radius: 35rpx;
   font-size: 24rpx;
   padding-left: 60rpx;
@@ -68,7 +77,7 @@
   margin-bottom: 30rpx;
   filter: drop-shadow(0px 8rpx 8rpx rgba(0, 0, 0, 0.05));
   text-align: center;
-  border: 1px solid #1EA5FC;
+  border: 1px solid var(--theme-color-);
   border-radius: 10rpx;
 }
 .add-icon {
@@ -93,11 +102,31 @@
   line-height: 40rpx;
   height: 40rpx;
   overflow: hidden;
-  color: #4E4E4E;
+  color: var(--main-text-color-);
 }
 .search-icon {
   position: absolute;
   width: 35rpx;
   height: 28rpx;
   left: 30rpx;
+}
+
+.tags-wrap {
+  width: 100vw;
+  padding: 0 20rpx 0 40rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.tag {
+  font-size: 32rpx;
+  color: var(--sub-text-color-);
+  padding: 10rpx 20rpx;
+  background: #F1EFE5;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 44rpx;
+  margin-top: 30rpx;
+  margin-right: 20rpx;
+  float: left;
 }

@@ -39,6 +39,18 @@
         {
           "name": "pages/import-weread/import-weread",
           "pathName": "pages/import-weread/import-weread",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/about/about",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search-book/search-book",
+          "pathName": "pages/search-book/search-book",
           "scene": null
         }
       ]

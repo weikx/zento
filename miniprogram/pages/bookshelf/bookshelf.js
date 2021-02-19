@@ -8,7 +8,9 @@ Page({
   data: {
     checkedTab: 0,
     refresherTriggered: false,
-    scrollViewHeight: 0
+    scrollViewHeight: App.globalData.windowHeight - App.globalData.navHeight - 65 - 55, // 55 = 输入框高度
+    inputDisTop: App.globalData.navHeight,
+    booksList: App.globalData.booksList
   },
 
   /**
@@ -29,9 +31,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow () {
-    this.setData({
-      scrollViewHeight: App.globalData.windowHeight - App.globalData.navHeight - 65 - 55
-    })
     console.log(this.data.scrollViewHeight)
 
     this.getTabBar().setData({

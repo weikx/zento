@@ -1,0 +1,80 @@
+/* components/dialog/dialog.wxss */
+.dialog-mask {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .3);
+}
+
+.dialog-wrap {
+  width: 610rpx;
+  height: 320rpx;
+  background: #fff;
+  box-shadow: 0px 0px 40rpx 20rpx rgba(151, 151, 151, 0.2);
+  border-radius: 20rpx;
+  margin-top: -10vh;
+  padding: 40rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.wrap-input {
+  height: 340rpx;
+}
+.dialog-title {
+  font-size: 32rpx;
+  color: var(--main-text-color-);
+}
+.dialog-subtitle {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: var(--sub-text-color-);
+}
+.dialog-button-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60rpx;
+  height: 60rpx;
+}
+.dialog-button {
+  width: 240rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.button-cancel {
+  background: #EEF1F6;
+  color: var(--sub-text-color-);
+}
+.button-confirm {
+  background: var(--theme-color-);
+  color: #fff;
+}
+
+.dialog-input-wrap {
+  display: flex;
+  height: 80rpx;
+  background: #EEF1F6;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.dialog-input__icon {
+  width: 60rpx;
+  height: 40rpx;
+}
+.dialog-input {
+  flex: 1;
+  height: 100%;
+}

@@ -2,7 +2,7 @@ Component({
   data: {
     selected: 0,
     color: "#868686",
-    selectedColor: "#1EA5FC",
+    selectedColor: "#F9B198",
     list: [{
       pagePath: "/pages/home/home",
       iconPath: "./home2.png",
@@ -13,7 +13,7 @@ Component({
       pagePath: "/pages/bookshelf/bookshelf",
       iconPath: "./bookshelf2.png",
       selectedIconPath: "./bookshelf1.png",
-      text: "书摘"
+      text: "书架"
     },
     {
       pagePath: "/pages/profile/profile",

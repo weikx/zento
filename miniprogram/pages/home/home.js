@@ -6,6 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
+    indicatorDots: false,
+    vertical: false,
+    autoplay: false,
+    interval: 2000,
+    duration: 500,
+    showDialog: false
   },
 
   /**
@@ -68,5 +75,19 @@ Page({
 
   scroll(e) {
     console.log(e)
+  },
+  change(e) {
+    console.log(e)
+    // wx.vibrateShort({
+    //   type: 'heavy'
+    // })
+  },
+  transition(e) {
+    // console.log(e)
+  },
+  onShowDialog() {
+    this.setData({
+      showDialog: true
+    })
   }
 })

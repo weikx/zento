@@ -12,18 +12,18 @@
   <image src="./avatar.svg" class="avatar"></image>
   <view class="user-text">
     <view class="user-name">喂鸭梨</view>
-    <text class="bio">世界上最大的勇气，是压力下的优雅。</text>
+    <text class="bio">士欲宣其义,必先读其书。</text>
   </view>
 </view>
 
 <view class="statistic-wrap">
   <view class="statistic-item">
-    <view class="statistic-count">100</view>
+    <view class="statistic-count">86</view>
     <view class="statistic-desc">摘录条数</view>
   </view>
   <view class="statistic-item">
-    <view class="statistic-count">100</view>
-    <view class="statistic-desc">摘录条数</view>
+    <view class="statistic-count">6386</view>
+    <view class="statistic-desc">摘录字数</view>
   </view>
 </view>
 
@@ -34,22 +34,28 @@
       <text class="list-text">导入微信读书笔记</text>
     </view>
   </navigator>
-  <navigator url="/pages/import-weread/import-weread">
+  <navigator url="/pages/invite/invite">
     <view class="list-item">
       <image src="./icon3.svg" class="list-icon"></image>
-      <text class="list-text">邀请有礼</text>
+      <text class="list-text">邀请好友</text>
     </view>
   </navigator>
-  <view class="list-item">
-    <image src="./icon4.svg" class="list-icon"></image>
-    <text class="list-text">使用教程</text>
-  </view>
-  <view class="list-item">
-    <image src="./icon5.svg" class="list-icon"></image>
-    <text class="list-text">意见反馈</text>
-  </view>
-  <view class="list-item">
-    <image src="./icon6.svg" class="list-icon"></image>
-    <text class="list-text">关于我们</text>
-  </view>
+  <navigator url="/pages/help/help">
+    <view class="list-item">
+      <image src="./icon4.svg" class="list-icon"></image>
+      <text class="list-text">使用帮助</text>
+    </view>
+  </navigator>
+  <button open-type="feedback">
+    <view class="list-item">
+      <image src="./icon5.svg" class="list-icon"></image>
+      <text class="list-text">意见反馈</text>
+    </view>
+  </button>
+  <navigator url="/pages/about/about">
+    <view class="list-item">
+      <image src="./icon6.svg" class="list-icon"></image>
+      <text class="list-text">关于我们</text>
+    </view>
+  </navigator>
 </view>

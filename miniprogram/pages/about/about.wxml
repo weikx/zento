@@ -1,0 +1,33 @@
+<!--miniprogram/pages/about/about.wxml-->
+<view class="wrap">
+  <image class="bg-img" src="./bg.svg"></image>
+  <image class="logo" src="./logo.png"></image>
+  <view class="app-name">知了笔记</view>
+  <view class="app-version">v0.0.1</view>
+  <view class="list-wrap">
+    <view class="list">
+      <text class="list-left">功能介绍</text>
+      <view class="list-right">
+        <image class="arrow" src="./arrow.svg"></image>
+      </view>
+    </view>
+    <view class="list">
+      <text class="list-left">服务协议</text>
+      <view class="list-right">
+        <image class="arrow" src="./arrow.svg"></image>
+      </view>
+    </view>
+    <view class="list" bindtap="setClipboardData" data-value="222555777">
+      <text class="list-left">QQ交流群</text>
+      <view class="list-right">
+        <text>222555777 </text>
+        <image class="arrow" src="./arrow.svg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="website" bindtap="setClipboardData" data-value="https://zlnote.com">官方网站</view>
+  <view class="copyright">© 2021 Zlnote.com weikx.</view>
+
+  <!--复制内容提示-->
+  <mp-toptips msg="{{tipMsg}}" ext-class="tipstyle" type="success" show="{{tipMsg}}"></mp-toptips>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "dialog": "/components/dialog/dialog"
+  },
+  "navigationBarTitleText": "搜索书籍",
+  "navigationBarBackgroundColor": "#FFFFFF"
+}

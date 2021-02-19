@@ -89,3 +89,17 @@
   height: 40rpx;
   margin-right: 40rpx;
 }
+
+/* 清除按钮默认样式 */
+button {
+  padding: 0px !important;
+  width: 100% !important;
+  border: none;
+  border-radius: 0 !important;
+  background-color: transparent;
+  font-weight: 400 !important;
+}
+/* button:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  opacity: 0.7 !important;
+} */

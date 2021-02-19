@@ -3,7 +3,11 @@
     "pages/home/home",
     "pages/bookshelf/bookshelf",
     "pages/profile/profile",
-    "pages/import-weread/import-weread"
+    "pages/import-weread/import-weread",
+    "pages/about/about",
+    "pages/invite/invite",
+    "pages/help/help",
+    "pages/search-book/search-book"
   ],
   "tabBar": {
     "custom": true,
@@ -30,5 +34,8 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  }
 }

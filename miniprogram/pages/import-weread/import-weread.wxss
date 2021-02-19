@@ -23,7 +23,7 @@
 .button {
   width: 520rpx;
   height: 100rpx;
-  background: #1EA5FC;
+  background: var(--theme-color-);
   border-radius: 10rpx;
   margin: 0 auto;
   margin-top: 200rpx;

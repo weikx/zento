@@ -24,31 +24,18 @@ Component({
    * 组件的初始数据
    */
   data: {
-    navHeight: 0,
-    statusBarHeight: 0,
-    navMainHeight: 0,
-    navTop: 0,
-    customWidth: 0,
-    customHeight: 0,
-    customLeft: 0
+    navHeight: App.globalData.navHeight,
+    statusBarHeight: App.globalData.statusBarHeight,
+    navMainHeight: App.globalData.navMainHeight,
+    navTop: App.globalData.navTop,
+    customWidth: App.globalData.customWidth,
+    customHeight: App.globalData.customHeight,
+    customLeft: App.globalData.customLeft
   },
-
   /**
    * 组件的方法列表
    */
   methods: {
 
-  },
-
-  ready() {
-    this.setData({
-      navHeight: App.globalData.navHeight,
-      statusBarHeight: App.globalData.statusBarHeight,
-      navMainHeight: App.globalData.navMainHeight,
-      navTop: App.globalData.navTop,
-      customWidth: App.globalData.customWidth,
-      customHeight: App.globalData.customHeight,
-      customLeft: App.globalData.customLeft
-    })
   }
 })

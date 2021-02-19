@@ -1,6 +1,7 @@
 //app.js
 App({
-  globalData: {},
+  globalData: {
+  },
   onLaunch: function () {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
@@ -20,7 +21,7 @@ App({
     const systemInfo = wx.getSystemInfoSync()
     const statusBarHeight = systemInfo.statusBarHeight,
     navTop = menuButtonObject.top,
-    windowHeight = systemInfo.windowHeight,
+    windowHeight = systemInfo.screenHeight,
     navHeight = statusBarHeight + menuButtonObject.height + (menuButtonObject.top - statusBarHeight) * 2,
     navMainHeight = navHeight - statusBarHeight,
     customWidth = menuButtonObject.width,
@@ -34,7 +35,87 @@ App({
       navMainHeight,
       customWidth,
       customHeight,
-      customLeft
+      customLeft,
+      booksList: [
+        {
+          name: '怪诞故事集',
+          author: '[美]奥加尔·托卡尔丘克',
+          image: 'https://img3.doubanio.com/view/subject/s/public/s33663520.jpg',
+          year: '1982'
+        },
+        {
+          name: '房思琪的初恋乐园',
+          author: '房思琪',
+          image: 'https://img3.doubanio.com/view/subject/s/public/s29651121.jpg',
+          year: '2017'
+        },
+        {
+          name: '解忧杂货铺',
+          author: '东野圭吾',
+          image: 'https://img3.doubanio.com/view/subject/s/public/s27264181.jpg',
+          year: '2014'
+        },
+        {
+          name: '平凡的世界',
+          author: '作者',
+          image: 'https://img3.doubanio.com/view/subject/s/public/s1144911.jpg',
+          year: '2009'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        },
+        {
+          name: '风声',
+          author: '麦加',
+          image: 'https://img1.doubanio.com/view/subject/s/public/s33734607.jpg',
+          year: '2016'
+        }
+      ]
     }
     console.log(systemInfo, menuButtonObject)
   }
