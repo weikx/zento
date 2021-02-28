@@ -89,5 +89,8 @@ Page({
     this.setData({
       showDialog: true
     })
+  },
+  onDialogClose(e) {
+    console.log(e)
   }
 })

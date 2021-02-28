@@ -1,17 +1,6 @@
-<!--miniprogram/pages/home/home.wxml-->
-<view class="app-title">
-  知了笔记✨
-</view>
-
-
-<swiper indicator-dots="{{indicatorDots}}"
-  easing-function="easeOutCubic"
-  bindchange="change"
-  bindtransition="transition"
-  style="height:75vh"
-  previous-margin="50rpx"
-  next-margin="50rpx"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+<!-- miniprogram/pages/home/home.wxml -->
+<view class="app-title">知了笔记✨</view>
+<swiper indicator-dots="{{indicatorDots}}" easing-function="easeOutCubic" bindchange="change" bindtransition="transition" style="height:75vh" previous-margin="50rpx" next-margin="50rpx" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{background}}" wx:key="*this">
     <swiper-item style="overflow: visible">
       <view class="card">
@@ -23,6 +12,4 @@
     </swiper-item>
   </block>
 </swiper>
-
-
-<dialog show="{{showDialog}}" input></dialog>
+<dialog show="{{showDialog}}" title="将要创建书籍" message="《我也不知道是啥》" input bind:comfirm="onDialogClose"></dialog>

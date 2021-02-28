@@ -1,15 +1,14 @@
-<!--pages/search-book/search-book.wxml-->
+<!-- pages/search-book/search-book.wxml -->
 <view class="search-wrap">
   <view class="input-wrap">
     <image src="../../assets/images/search-icon.svg" class="search-icon"></image>
-    <input focus type="text" class="search-input" placeholder="搜索书籍或书摘内容"/>
+    <input focus type="text" class="search-input" placeholder="搜索书籍或书摘内容" />
     <image src="./images/scan-icon.svg" class="scan-icon" bindtap="scanCode"></image>
   </view>
 </view>
-
 <scroll-view class="list-wrap" enable-flex scroll-y refresher-enabled bindrefresherrefresh="refresh" refresher-triggered="{{refresherTriggered}}" show-scrollbar="{{false}}">
   <block wx:for="{{booksList}}">
-    <view class="books-card">
+    <view class="books-card" bindtap="addBook">
       <view class="card-left">
         <image src="{{item.image}}" class="book-img"></image>
       </view>
@@ -21,10 +20,8 @@
     </view>
   </block>
 </scroll-view>
-
 <view class="create-book" style="bottom: {{keyboardHeight}}px">
   <image src="./images/pen-icon.svg" class="pen-icon"></image>
   <text>自定义书籍</text>
 </view>
-
-<dialog show></dialog>
+<dialog show="{{showDialog}}" title="将要创建书籍" message="《房思琪的初恋乐园》"></dialog>

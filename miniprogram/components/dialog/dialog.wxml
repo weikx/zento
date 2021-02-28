@@ -1,23 +1,23 @@
-<!--components/dialog/dialog.wxml-->
-<view class="dialog-mask" wx:if="{{show}}">
+<!-- components/dialog/dialog.wxml -->
+<view class="dialog-mask {{show ? 'open' : ''}}">
   <view class="dialog-wrap" wx:if="{{!input}}">
-    <view class="dialog-title">将要创建书籍</view>
-    <view class="dialog-subtitle">《编码：隐藏在计算机软件背后的语言》</view>
+    <view class="dialog-title">{{title}}</view>
+    <view class="dialog-subtitle">{{message}}</view>
     <view class="dialog-button-wrap">
       <view class="dialog-button button-cancel" bindtap="closeDialog">取消</view>
       <view class="dialog-button button-confirm">确认</view>
     </view>
   </view>
-  <!--可输入弹窗-->
+  <!-- 可输入弹窗 -->
   <view class="dialog-wrap wrap-input" wx:else>
-    <view class="dialog-title">将要创建书籍</view>
+    <view class="dialog-title">{{title}}</view>
     <view class="dialog-input-wrap">
       <image class="dialog-input__icon" src="./images/book-icon.svg"></image>
-      <input type="text" class="dialog-input" />
+      <input wx:if="{{show}}" type="text" focus placeholder="{{message}}" model:value="{{inputValue}}" class="dialog-input" />
     </view>
     <view class="dialog-button-wrap">
       <view class="dialog-button button-cancel" bindtap="closeDialog">取消</view>
-      <view class="dialog-button button-confirm">确认</view>
+      <view class="dialog-button button-confirm" bindtap="comfirmDialog">确认</view>
     </view>
   </view>
 </view>

@@ -1,15 +1,16 @@
 // pages/search-book/search-book.js
 const App = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     refresherTriggered: false, // 停止刷新标志
-    scrollViewHeight: App.globalData.windowHeight - App.globalData.navHeight - 65 - 55,
+    scrollViewHeight:
+      App.globalData.windowHeight - App.globalData.navHeight - 65 - 55,
     booksList: App.globalData.booksList,
-    keyboardHeight: 0
+    keyboardHeight: 0,
+    showDialog: false
   },
 
   onReady() {
@@ -38,9 +39,19 @@ Page({
   scanCode() {
     wx.scanCode({
       scanType: ['barCode'],
-      success (res) {
+      success(res) {
         console.log(res.result)
       }
     })
+  },
+
+  addBook() {
+    this.setData({
+      showDialog: true
+    })
+  },
+
+  addCustomerBook() {
+    
   }
 })
