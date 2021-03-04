@@ -1,36 +1,37 @@
-<!--miniprogram/pages/bookshelf/bookshelf.wxml-->
+<!-- miniprogram/pages/bookshelf/bookshelf.wxml -->
 <navbar defaultType="{{false}}">
   <view slot="left">
     <view class="nav-switch">
-      <view class="{{checkedTab == 0 ? 'nav-switch__checked' : 'nav-switch__text'}}" bindtap="switchTab" data-index="0">书架</view>
-      <view class="{{checkedTab == 1 ? 'nav-switch__checked' : 'nav-switch__text'}}" bindtap="switchTab" data-index="1">标签</view>
+      <view class="{{checkedTab == 0 ? 'nav-switch__checked' : 'nav-switch__text'}}" bindtap="switchTab" data-index="0">
+        书架
+      </view>
+      <view class="{{checkedTab == 1 ? 'nav-switch__checked' : 'nav-switch__text'}}" bindtap="switchTab" data-index="1">
+        标签
+      </view>
     </view>
   </view>
 </navbar>
-
 <view class="search-position">
-  <!-- search-position 用于定位后占位-->
+  <!-- search-position 用于定位后占位 -->
   <view class="search-wrap" style="top: {{inputDisTop}}px">
     <image src="../../assets/images/search-icon.svg" class="search-icon"></image>
-    <input hidden="{{checkedTab == 1}}" type="text" class="search-input" placeholder="搜索书籍或书摘内容"/>
-    <input hidden="{{checkedTab == 0}}" type="text" class="search-input" placeholder="搜索标签"/>
+    <input hidden="{{checkedTab == 1}}" type="text" class="search-input" placeholder="搜索书籍或书摘内容" />
+    <input hidden="{{checkedTab == 0}}" type="text" class="search-input" placeholder="搜索标签" />
   </view>
 </view>
-
 <scroll-view hidden="{{checkedTab == 1}}" enable-flex scroll-y refresher-enabled bindrefresherrefresh="refresh" refresher-triggered="{{refresherTriggered}}" show-scrollbar="{{false}}" style="height: {{scrollViewHeight}}px">
   <view class="books-wrap">
     <navigator hover-class="none" class="add-book" url="/pages/search-book/search-book">
       <image src="./add-book.svg" class="add-icon"></image>
     </navigator>
     <block wx:for="{{booksList}}">
-      <view class="book">
+      <navigator hover-class="none" class="book" url="/pages/book-detail/book-detail">
         <image class="book-img" src="{{item.image}}"></image>
         <text class="book-name">{{item.name}}</text>
-      </view>
+      </navigator>
     </block>
   </view>
 </scroll-view>
-
 <scroll-view hidden="{{checkedTab == 0}}" enable-flex scroll-y refresher-enabled bindrefresherrefresh="refresh" refresher-triggered="{{refresherTriggered}}" show-scrollbar="{{false}}" style="height: {{scrollViewHeight}}px">
   <view class="tags-wrap">
     <view class="tag">理财</view>

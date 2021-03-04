@@ -24,9 +24,12 @@
   /* background: cyan; */
 }
 .nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   text-align: center;
-  color: #4E4E4E;
+  color: #4e4e4e;
 }
 .nav-right {
   flex: 1;

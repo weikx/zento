@@ -1,0 +1,6 @@
+<!-- miniprogram/components/divider/divider.wxml -->
+<view class="divider">
+  <view class="text">
+    <slot></slot>
+  </view>
+</view>

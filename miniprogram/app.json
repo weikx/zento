@@ -7,7 +7,9 @@
     "pages/about/about",
     "pages/invite/invite",
     "pages/help/help",
-    "pages/search-book/search-book"
+    "pages/search-book/search-book",
+    "pages/book-detail/book-detail",
+    "components/divider/divider"
   ],
   "tabBar": {
     "custom": true,

@@ -41,16 +41,13 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
     "game": {
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
@@ -58,7 +55,13 @@
         {
           "id": -1,
           "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/book-detail/book-detail",
+          "pathName": "pages/book-detail/book-detail",
+          "scene": null
         }
       ]
     }

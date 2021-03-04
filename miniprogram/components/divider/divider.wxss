@@ -1,0 +1,16 @@
+/* miniprogram/components/divider/divider.wxss */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 670rpx;
+  height: 2rpx;
+  background: #ccc;
+  margin: 50rpx auto;
+}
+.text {
+  padding: 0 50rpx;
+  font-size: 24rpx;
+  color: var(--sub-text-color-);
+  background: var(--page-bg-color-);
+}

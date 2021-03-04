@@ -13,7 +13,7 @@
     <view class="dialog-title">{{title}}</view>
     <view class="dialog-input-wrap">
       <image class="dialog-input__icon" src="./images/book-icon.svg"></image>
-      <input wx:if="{{show}}" type="text" focus placeholder="{{message}}" model:value="{{inputValue}}" class="dialog-input" />
+      <input wx:if="{{show}}" type="text" focus placeholder="{{message}}" model:value="{{inputValue}}" class="dialog-input {{show ? 'show' : ''}}" />
     </view>
     <view class="dialog-button-wrap">
       <view class="dialog-button button-cancel" bindtap="closeDialog">取消</view>

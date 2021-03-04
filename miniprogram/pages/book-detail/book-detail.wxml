@@ -1,0 +1,30 @@
+<!-- miniprogram/pages/book-detail/book-detail.wxml -->
+<navbar bgColor="#fff">
+  <view slot="title">
+    <view class="switch-wrap">
+      <view class="switch">时间</view>
+      <view class="switch checked">页码</view>
+    </view>
+  </view>
+</navbar>
+<view class="book-info-wrap">
+  <view class="book-info">
+    <view class="book-cover">
+      <image src="https://img9.doubanio.com/view/ark_article_cover/retina/public/138306452.jpg?v=1587024863"></image>
+    </view>
+    <view class="book-text">
+      <view class="book-name">房思琪的初恋乐园</view>
+      <view class="book-author">房思琪</view>
+    </view>
+  </view>
+</view>
+<divider>第一章</divider>
+<view class="text-card" wx:for="{{20}}">
+  <view class="text">
+    在过去几十年间，我们已经成功遏制了饥荒、瘟疫和战争。当然，这些问题还算不上被完全解决、但已经从过去不可理解、无法控制的自然力量转化为可应对的挑战。
+  </view>
+  <view class="text-info">
+    <view class="position">第18页</view>
+    <view class="date">2020.01.05</view>
+  </view>
+</view>

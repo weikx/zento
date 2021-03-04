@@ -84,6 +84,8 @@
   height: 100%;
   font-size: 24rpx;
 }
+.dialog-input.show {
+}
 
 .dialog-mask.open {
   opacity: 1;
