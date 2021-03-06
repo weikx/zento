@@ -45,3 +45,16 @@
   letter-spacing: 0.1px;
   line-height: 40px;
 }
+.back {
+  position: relative;
+}
+.back::after {
+  position: absolute;
+  content: '';
+  top: -15rpx;
+  left: -10rpx;
+  bottom: -10rpx;
+  right: -10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}

@@ -9,7 +9,8 @@
     "pages/help/help",
     "pages/search-book/search-book",
     "pages/book-detail/book-detail",
-    "components/divider/divider"
+    "components/divider/divider",
+    "pages/add-note/add-note"
   ],
   "tabBar": {
     "custom": true,

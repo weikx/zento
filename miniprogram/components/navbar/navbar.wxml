@@ -4,7 +4,7 @@
     <view class="status-bar" style="height:{{statusBarHeight}}px"></view>
     <view class="navbar-main" style="height:{{navMainHeight}}px">
       <view class="nav-left">
-        <text wx:if="{{defaultType}}" style="margin-left:{{customLeft*2}}px" class="iconfont icon-fanhui"></text>
+        <text wx:if="{{defaultType}}" style="margin-left:{{customLeft*2}}px" class="iconfont icon-fanhui back" bindtap="back"></text>
         <!-- <view wx:else class="custom-btn" style="width:{{customWidth}}px;height:{{customHeight}}px;border-radius:{{customHeight/2}}px;margin-left:{{customLeft*2}}px">
           <view class="say-hello">早上好~</view>
           <view class="app-name">Zento</view>

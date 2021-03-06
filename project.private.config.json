@@ -51,6 +51,18 @@
         {
           "name": "pages/search-book/search-book",
           "pathName": "pages/search-book/search-book",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/book-detail/book-detail",
+          "pathName": "pages/book-detail/book-detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add-note/add-note",
+          "pathName": "pages/add-note/add-note",
           "scene": null
         }
       ]

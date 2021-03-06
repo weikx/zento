@@ -1,0 +1,13 @@
+/* miniprogram/pages/add-note/add-note.wxss */
+.arrow {
+  width: 15rpx;
+  height: 15rpx;
+}
+.nav-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.arrow {
+  margin-left: 15rpx;
+}
