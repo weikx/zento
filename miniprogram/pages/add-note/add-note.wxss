@@ -1,4 +1,7 @@
 /* miniprogram/pages/add-note/add-note.wxss */
+page {
+  background: #fff;
+}
 .arrow {
   width: 15rpx;
   height: 15rpx;
@@ -10,4 +13,80 @@
 }
 .arrow {
   margin-left: 15rpx;
+}
+
+.main-textarea {
+  width: 670rpx;
+  height: 300rpx;
+  background: var(--page-bg-color-);
+  margin: 50rpx auto 20rpx auto;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+
+.sub-textarea {
+  opacity: 0;
+  width: 0rpx;
+  height: 0rpx;
+  background: var(--page-bg-color-);
+  margin: 0 auto 20rpx auto;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  transition: all 0.3s;
+  margin-top: -60rpx;
+  /* height 设置为0还是会有一部分显示在外 故用margin-top将其隐藏 */
+}
+
+.sub-textarea.show {
+  opacity: 1;
+  margin: 0 auto 20rpx auto;
+  width: 670rpx;
+  height: 200rpx;
+}
+
+.cell {
+  width: 670rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+.cell-line {
+  width: 670rpx;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #cccccc;
+}
+
+.cell-title {
+  font-size: 24rpx;
+}
+
+.cell-value {
+  position: relative;
+  color: var(--main-text-color-);
+  font-size: 24rpx;
+}
+
+.cell .icon-add {
+  border: 20rpx solid transparent;
+  transform: translateX(20rpx);
+  width: 30rpx;
+  height: 30rpx;
+  transition: all 0.3s;
+  border-radius: 50%;
+  transform-origin: center center;
+}
+.cell .icon-add.rotate {
+  transform: rotate(45deg) translate(20rpx, -20rpx);
+}
+
+.cell .cell-value__input {
+  width: 100rpx;
+  text-align: right;
 }

@@ -21,7 +21,7 @@
 </view>
 <scroll-view hidden="{{checkedTab == 1}}" enable-flex scroll-y refresher-enabled bindrefresherrefresh="refresh" refresher-triggered="{{refresherTriggered}}" show-scrollbar="{{false}}" style="height: {{scrollViewHeight}}px">
   <view class="books-wrap">
-    <navigator hover-class="none" class="add-book" url="/pages/search-book/search-book">
+    <navigator hover-class="none" class="add-book" url="/pages/add-note/add-note">
       <image src="./add-book.svg" class="add-icon"></image>
     </navigator>
     <block wx:for="{{booksList}}">

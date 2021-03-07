@@ -12,4 +12,3 @@
     </swiper-item>
   </block>
 </swiper>
-<dialog show="{{showDialog}}" title="将要创建书籍" message="《我也不知道是啥》" input bind:comfirm="onDialogClose"></dialog>
