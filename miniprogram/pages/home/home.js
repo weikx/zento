@@ -1,5 +1,5 @@
 // miniprogram/pages/home.js
-
+import callFunc from '../../utils/call_func'
 Page({
   /**
    * 页面的初始数据
@@ -74,8 +74,8 @@ Page({
     // console.log(e)
   },
   onShowDialog() {
-    wx.cloud.callFunction({
-      name: 'douban'
+    callFunc({
+      callName: 'douban'
     }).then(res => {
       console.log(res)
     })

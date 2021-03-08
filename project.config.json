@@ -70,6 +70,12 @@
         {
           "name": "pages/add-note/add-note",
           "pathName": "pages/add-note/add-note",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search-book/search-book",
+          "pathName": "pages/search-book/search-book",
           "scene": null
         }
       ]

@@ -2,20 +2,20 @@
 <view class="search-wrap">
   <view class="input-wrap">
     <image src="../../assets/images/search-icon.svg" class="search-icon"></image>
-    <input focus type="text" class="search-input" placeholder="搜索书籍或书摘内容" />
+    <input model:value="{{inputValue}}" bindconfirm="search" focus type="text" confirm-type="search" class="search-input" placeholder="搜索书籍或书摘内容" />
     <image src="./images/scan-icon.svg" class="scan-icon" bindtap="scanCode"></image>
   </view>
 </view>
 <scroll-view class="list-wrap" enable-flex scroll-y refresher-enabled bindrefresherrefresh="refresh" refresher-triggered="{{refresherTriggered}}" show-scrollbar="{{false}}">
   <block wx:for="{{booksList}}">
-    <view class="books-card" bindtap="addBook">
+    <view class="books-card" bindtap="addBook" data-book="{{item}}">
       <view class="card-left">
-        <image src="{{item.image}}" class="book-img"></image>
+        <image src="{{item.pic}}" class="book-img"></image>
       </view>
       <view class="card-right">
-        <view class="book-name">{{item.name}}</view>
-        <view class="author-name">{{item.author}}</view>
-        <view class="publish-year">出版：{{item.year}}</view>
+        <view class="book-name">{{item.title}}</view>
+        <view class="author-name">{{item.author_name}}</view>
+        <view class="publish-year">出版：{{item.year || '无'}}</view>
       </view>
     </view>
   </block>
@@ -24,4 +24,4 @@
   <image src="./images/pen-icon.svg" class="pen-icon"></image>
   <text>自定义书籍</text>
 </view>
-<dialog show="{{showDialog}}" title="将要创建书籍" message="《房思琪的初恋乐园》"></dialog>
+<dialog bind:comfirm="comfirm" show="{{dialog.show}}" title="{{dialog.title}}" message="{{dialog.message}}"></dialog>

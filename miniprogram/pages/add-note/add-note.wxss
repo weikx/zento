@@ -15,6 +15,13 @@ page {
   margin-left: 15rpx;
 }
 
+.book-name {
+  max-width: 40vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .main-textarea {
   width: 670rpx;
   height: 300rpx;

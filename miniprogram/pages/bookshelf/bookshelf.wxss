@@ -2,7 +2,7 @@
 .nav-switch {
   display: flex;
   justify-content: space-between;
-  align-items:flex-end;
+  align-items: flex-end;
   width: 180rpx;
 }
 .nav-switch__checked {
@@ -10,32 +10,37 @@
   color: var(--main-text-color-);
   font-size: 48rpx;
   line-height: 55rpx;
-  transform: all .3s;
+  transform: all 0.3s;
 }
 .nav-switch__checked::after {
   position: absolute;
   bottom: 0;
   left: 4rpx;
-  content: "";
+  content: '';
   display: block;
   width: 90rpx;
   height: 22rpx;
-  background: linear-gradient(0deg, #F9B198 0%, rgba(251, 201, 183, 0.697917) 30.73%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    #f9b198 0%,
+    rgba(251, 201, 183, 0.697917) 30.73%,
+    rgba(255, 255, 255, 0) 100%
+  );
   border-radius: 10rpx;
   z-index: -1;
 }
 .nav-switch__text {
   font-size: 28rpx;
   color: var(--sub-text-color-);
-  transform: all .3s;
+  transform: all 0.3s;
   border: 15rpx solid transparent;
   border-top: 30rpx solid transparent;
   border-bottom: 0px;
 }
 
 .search-position {
- width: 100vw;
- height: 55px; 
+  width: 100vw;
+  height: 55px;
 }
 
 .search-wrap {
@@ -67,6 +72,7 @@
   margin: 30rpx auto;
   flex-wrap: wrap;
   padding-bottom: 20px;
+  min-height: 100vh;
 }
 .add-book {
   display: flex;
@@ -122,11 +128,19 @@
   font-size: 32rpx;
   color: var(--sub-text-color-);
   padding: 10rpx 20rpx;
-  background: #F1EFE5;
+  background: #f1efe5;
   border-radius: 20rpx;
   text-align: center;
   line-height: 44rpx;
   margin-top: 30rpx;
   margin-right: 20rpx;
   float: left;
+}
+
+.tip {
+  width: 100%;
+  font-size: 24rpx;
+  color: var(--desc-text-color-);
+  text-align: center;
+  padding-bottom: 100rpx;
 }

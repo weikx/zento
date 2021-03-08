@@ -42,20 +42,21 @@
   padding: 0 20rpx;
   box-sizing: border-box;
   width: 670rpx;
-  height: 220rpx;
+  min-height: 220rpx;
   margin: 0 auto;
   margin-top: 70rpx;
   background: #fff;
   border-radius: 10rpx;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0rpx 0rpx 8rpx rgba(0, 0, 0, 0.05);
 }
 .card-left {
   width: 152rpx;
   height: 230rpx;
   margin-top: -35rpx;
   border-radius: 6rpx;
-  filter: drop-shadow(0px 4px 9px rgba(139, 139, 139, 0.25));
+  box-shadow: 0rpx 8rpx 20rpx rgba(139, 139, 139, 0.3);
   overflow: hidden;
+  background-color: var(--page-bg-color-);
 }
 .book-img {
   width: 100%;

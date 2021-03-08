@@ -4,7 +4,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showExperience: false
+    showExperience: false,
+    book: {
+      title: '快捷笔记'
+    }
+  },
+
+  onLoad(options) {
+    if (options.book) {
+      this.setData({
+        book: JSON.parse(options.book)
+      })
+    }
   },
 
   triggerExperience() {

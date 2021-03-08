@@ -5,7 +5,7 @@
     <view class="dialog-subtitle">{{message}}</view>
     <view class="dialog-button-wrap">
       <view class="dialog-button button-cancel" bindtap="closeDialog">取消</view>
-      <view class="dialog-button button-confirm">确认</view>
+      <view class="dialog-button button-confirm" bindtap="comfirmDialog">确认</view>
     </view>
   </view>
   <!-- 可输入弹窗 -->

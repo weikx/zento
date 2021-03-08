@@ -36,7 +36,6 @@ Component({
         show: false,
         inputValue: ''
       })
-
       this.triggerEvent('comfirm', this.data.inputValue)
     }
   }

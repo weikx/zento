@@ -1,4 +1,5 @@
 // pages/search-book/search-book.js
+import callFunc from '../../utils/call_func'
 const App = getApp()
 Page({
   /**
@@ -8,9 +9,15 @@ Page({
     refresherTriggered: false, // 停止刷新标志
     scrollViewHeight:
       App.globalData.windowHeight - App.globalData.navHeight - 65 - 55,
-    booksList: App.globalData.booksList,
+    booksList: [],
+    checkedBook: {},
     keyboardHeight: 0,
-    showDialog: false
+    dialog: {
+      show: false,
+      title: '',
+      message: ''
+    },
+    inputValue: ''
   },
 
   onReady() {
@@ -37,6 +44,11 @@ Page({
   },
 
   scanCode() {
+    wx.showToast({
+      title: '暂未支持ISDN查询',
+      icon: 'none'
+    })
+    return
     wx.scanCode({
       scanType: ['barCode'],
       success(res) {
@@ -45,13 +57,42 @@ Page({
     })
   },
 
-  addBook() {
+  addBook(event) {
+    const book = event.currentTarget.dataset.book
     this.setData({
-      showDialog: true
+      dialog: {
+        show: true,
+        title: '将要创建书籍',
+        message: book.title
+      },
+      checkedBook: book
     })
   },
 
-  addCustomerBook() {
-    
-  }
+  search() {
+    wx.showLoading({
+      title: '搜索中~'
+    })
+    callFunc({
+      callName: 'douban',
+      data: {
+        query: this.data.inputValue
+      }
+    }).then(res => {
+      this.setData({
+        booksList: res
+      })
+      wx.hideLoading()
+    })
+  },
+
+  comfirm(e) {
+    wx.navigateTo({
+      url: `/pages/add-note/add-note?book=${JSON.stringify(
+        this.data.checkedBook
+      )}`
+    })
+  },
+
+  addCustomerBook() {}
 })
