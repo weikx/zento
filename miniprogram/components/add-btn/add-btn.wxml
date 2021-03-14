@@ -1,0 +1,4 @@
+<!--components/add-btn/add-btn.wxml-->
+<view class="add-btn">
+  <image src="./images/add-note-icon.svg" class="icon"></image>
+</view>

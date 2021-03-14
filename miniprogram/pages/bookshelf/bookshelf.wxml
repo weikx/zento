@@ -21,18 +21,15 @@
 </view>
 <scroll-view hidden="{{checkedTab == 1}}" enable-flex scroll-y refresher-enabled bindrefresherrefresh="refresh" refresher-triggered="{{refresherTriggered}}" show-scrollbar="{{false}}" style="height: {{scrollViewHeight}}px">
   <view class="books-wrap">
-    <navigator hover-class="none" class="add-book" url="/pages/search-book/search-book">
+    <navigator hover-class="none" class="add-book book" url="/pages/search-book/search-book">
       <image src="./add-book.svg" class="add-icon"></image>
     </navigator>
     <block wx:for="{{booksList}}">
-      <navigator hover-class="none" class="book" url="/pages/book-detail/book-detail">
-        <image class="book-img" src="{{item.image}}"></image>
-        <text class="book-name">{{item.name}}</text>
-      </navigator>
+      <view class="book" bindtap="toBookDetail" data-book="{{item}}">
+        <image class="book-img" src="{{item.pic}}"></image>
+        <text class="book-name">{{item.title}}</text>
+      </view>
     </block>
-  </view>
-  <view class="tip">
-    <view>目前所有笔记均储存于本地</view>
   </view>
 </scroll-view>
 <scroll-view hidden="{{checkedTab == 0}}" enable-flex scroll-y refresher-enabled bindrefresherrefresh="refresh" refresher-triggered="{{refresherTriggered}}" show-scrollbar="{{false}}" style="height: {{scrollViewHeight}}px">
@@ -51,3 +48,5 @@
     <view class="tag">编程</view>
   </view>
 </scroll-view>
+
+<add-btn></add-btn>

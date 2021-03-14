@@ -1,5 +1,7 @@
 // pages/search-book/search-book.js
 import callFunc from '../../utils/call_func'
+import database from '../../utils/wx_database'
+
 const App = getApp()
 Page({
   /**
@@ -87,10 +89,15 @@ Page({
   },
 
   comfirm(e) {
-    wx.navigateTo({
-      url: `/pages/add-note/add-note?book=${JSON.stringify(
-        this.data.checkedBook
-      )}`
+    database.add('bookshelf', {
+      ...this.data.checkedBook,
+      date: new Date()
+    }).then(res => {
+      wx.navigateTo({
+        url: `/pages/add-note/add-note?book=${JSON.stringify(
+          this.data.checkedBook
+        )}`
+      })
     })
   },
 

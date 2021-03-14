@@ -66,36 +66,39 @@
 }
 
 .books-wrap {
-  display: flex;
-  justify-content: space-between;
   width: 670rpx;
-  margin: 30rpx auto;
-  flex-wrap: wrap;
-  padding-bottom: 20px;
-  min-height: 100vh;
-}
-.add-book {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 30%;
-  height: 270rpx;
-  margin-bottom: 30rpx;
-  filter: drop-shadow(0px 8rpx 8rpx rgba(0, 0, 0, 0.05));
-  text-align: center;
-  border: 1px solid var(--theme-color-);
-  border-radius: 10rpx;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 .add-icon {
   width: 60rpx;
   height: 60rpx;
 }
 .book {
-  flex: 0 0 30%;
+  float: left;
+  margin-right: 5%;
+  width: 30%;
   height: 310rpx;
   margin-bottom: 30rpx;
   filter: drop-shadow(0px 8rpx 8rpx rgba(0, 0, 0, 0.05));
   text-align: center;
+}
+.book:nth-child(3n) {
+  margin-right: 0;
+}
+.add-book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin-right: 4%;
+  width: 30%;
+  height: 270rpx;
+  margin-bottom: 30rpx;
+  filter: drop-shadow(0px 8rpx 8rpx rgba(0, 0, 0, 0.05));
+  text-align: center;
+  border: 1px solid var(--theme-color-);
+  border-radius: 10rpx;
 }
 .book-img {
   width: 100%;

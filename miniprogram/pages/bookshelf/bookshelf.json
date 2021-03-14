@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "navbar": "/components/navbar/navbar"
+    "navbar": "/components/navbar/navbar",
+    "add-btn": "/components/add-btn/add-btn"
   },
   "navigationStyle": "custom"
 }

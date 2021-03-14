@@ -6,7 +6,7 @@
   </view>
 </navbar>
 <view class="main-textarea-wrap">
-  <textarea show-confirm-bar="{{false}}" maxlength="-1" placeholder="写下书摘内容" class="main-textarea"></textarea>
+  <textarea model:value="{{note}}" show-confirm-bar="{{false}}" maxlength="-1" placeholder="写下书摘内容" class="main-textarea"></textarea>
 </view>
 <view class="cell">
   <view class="cell-title">心得体会</view>
@@ -15,13 +15,16 @@
   </view>
 </view>
 <view class="sub-textarea-wrap">
-  <textarea show-confirm-bar="{{false}}" maxlength="-1" placeholder="写下心得体会" class="sub-textarea {{showExperience ? 'show' : ''}}"></textarea>
+  <textarea model:value="{{experience}}" show-confirm-bar="{{false}}" maxlength="-1" placeholder="写下心得体会" class="sub-textarea {{showExperience ? 'show' : ''}}"></textarea>
 </view>
 <view class="cell-line"></view>
 <view class="cell">
   <view class="cell-title">页码</view>
   <view class="cell-value">
-    <input type="number" class="cell-value__input" placeholder="点击添加" />
+    <input model:value="{{position}}"  type="number" class="cell-value__input" placeholder="点击添加" />
   </view>
 </view>
 <view class="cell-line"></view>
+
+
+<view class="publish" bindtap="publish">发布</view>

@@ -67,7 +67,7 @@
 .text-card {
   width: 670rpx;
   height: auto;
-  margin: 0 auto 20rpx auto;
+  margin: 20rpx auto 0 auto;
 }
 .text-card .text {
   background: #fff;

@@ -5,14 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    book: {},
+    notes: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      book: JSON.parse(options.book)
+    })
+    this.getNotes()
   },
 
   /**
@@ -62,5 +66,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  getNotes() {
+    const db = wx.cloud.database()
+    const collection = db.collection('notes')
+    collection.where({
+      book_title: this.data.book.title
+    }).get().then(res => {
+      this.setData({
+        notes: res.data
+      })
+    })
   }
 })

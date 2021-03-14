@@ -10,7 +10,7 @@ Page({
     refresherTriggered: false,
     scrollViewHeight: App.globalData.windowHeight - App.globalData.navHeight - 65 - 55, // 55 = 输入框高度
     inputDisTop: App.globalData.navHeight,
-    booksList: App.globalData.booksList
+    booksList: []
   },
 
   /**
@@ -24,18 +24,17 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.getBooks()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow () {
-    console.log(this.data.scrollViewHeight)
-
     this.getTabBar().setData({
       selected: 1
     })
+    this.getBooks()
   },
 
   /**
@@ -73,6 +72,13 @@ Page({
 
   },
 
+  toBookDetail(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: `/pages/book-detail/book-detail?book=${JSON.stringify(e.currentTarget.dataset.book)}`
+    })
+  },
+
   switchTab(e) {
     this.setData({
       checkedTab: e.target.dataset.index
@@ -84,9 +90,20 @@ Page({
       type: 'heavy'
     })
     setTimeout(() => {
+      this.getBooks()
+    }, 1000)
+  },
+
+  getBooks() {
+    const db = wx.cloud.database()
+    const collection = db.collection('bookshelf')
+    collection.where({
+      _openid: '{openid}'
+    }).get().then(res => {
       this.setData({
+        booksList: res.data,
         refresherTriggered: false
       })
-    }, 1000)
+    })
   }
 })
