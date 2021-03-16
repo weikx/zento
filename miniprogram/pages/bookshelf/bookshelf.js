@@ -1,14 +1,16 @@
 // miniprogram/pages/bookshelf/bookshelf.js
+import callFunc from '../../utils/call_func'
+
 const App = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     checkedTab: 0,
     refresherTriggered: false,
-    scrollViewHeight: App.globalData.windowHeight - App.globalData.navHeight - 65 - 55, // 55 = 输入框高度
+    scrollViewHeight:
+      App.globalData.windowHeight - App.globalData.navHeight - 65 - 55, // 55 = 输入框高度
     inputDisTop: App.globalData.navHeight,
     booksList: []
   },
@@ -16,9 +18,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
+  onLoad: function (options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -30,7 +30,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow () {
+  onShow() {
     this.getTabBar().setData({
       selected: 1
     })
@@ -40,42 +40,34 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-
-  },
+  onHide: function () {},
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
-  },
+  onUnload: function () {},
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function () {},
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function () {},
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  },
+  onShareAppMessage: function () {},
 
   toBookDetail(e) {
     console.log(e)
     wx.navigateTo({
-      url: `/pages/book-detail/book-detail?book=${JSON.stringify(e.currentTarget.dataset.book)}`
+      url: `/pages/book-detail/book-detail?book=${JSON.stringify(
+        e.currentTarget.dataset.book
+      )}`
     })
   },
 
@@ -95,13 +87,11 @@ Page({
   },
 
   getBooks() {
-    const db = wx.cloud.database()
-    const collection = db.collection('bookshelf')
-    collection.where({
-      _openid: '{openid}'
-    }).get().then(res => {
+    callFunc({
+      callName: 'bookshelf',
+    }).then(res => {
       this.setData({
-        booksList: res.data,
+        booksList: res,
         refresherTriggered: false
       })
     })
