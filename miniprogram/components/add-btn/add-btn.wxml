@@ -1,4 +1,4 @@
 <!--components/add-btn/add-btn.wxml-->
-<view class="add-btn">
+<view class="add-btn" bindtap="toAddNote">
   <image src="./images/add-note-icon.svg" class="icon"></image>
 </view>

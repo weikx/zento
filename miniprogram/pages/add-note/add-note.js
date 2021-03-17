@@ -29,17 +29,18 @@ Page({
   },
 
   publish() {
-    database.add('notes', {
-      book_title: this.data.book.title,
-      note: this.data.note,
-      experience: this.data.experience,
-      position: this.data.position,
-      date: new Date()
-    }).then(res => {
-      wx.showToast({
-        title: '添加成功~',
-        icon: 'none'
+    database
+      .add('notes', {
+        book_title: this.data.book.title,
+        note: this.data.note,
+        experience: this.data.experience,
+        position: this.data.position
       })
-    })
+      .then(res => {
+        wx.showToast({
+          title: '添加成功~',
+          icon: 'none'
+        })
+      })
   }
 })

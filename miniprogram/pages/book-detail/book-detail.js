@@ -73,7 +73,7 @@ Page({
     const collection = db.collection('notes')
     collection.where({
       book_title: this.data.book.title
-    }).get().then(res => {
+    }).orderBy('position', 'esc').get().then(res => {
       this.setData({
         notes: res.data
       })

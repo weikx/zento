@@ -47,7 +47,7 @@ Page({
 
   scanCode() {
     wx.showToast({
-      title: '暂未支持ISDN查询',
+      title: '功能即将开放',
       icon: 'none'
     })
     return
@@ -89,16 +89,17 @@ Page({
   },
 
   comfirm(e) {
-    database.add('bookshelf', {
-      ...this.data.checkedBook,
-      date: new Date()
-    }).then(res => {
-      wx.navigateTo({
-        url: `/pages/add-note/add-note?book=${JSON.stringify(
-          this.data.checkedBook
-        )}`
+    database
+      .add('bookshelf', {
+        ...this.data.checkedBook
       })
-    })
+      .then(res => {
+        wx.redirectTo({
+          url: `/pages/add-note/add-note?book=${JSON.stringify(
+            this.data.checkedBook
+          )}`
+        })
+      })
   },
 
   addCustomerBook() {}

@@ -1,4 +1,13 @@
 <!-- miniprogram/pages/book-detail/book-detail.wxml -->
+<wxs module="module">
+  function formatDate(timestamp) {
+    var newDate = getDate()
+    newDate.setTime(timestamp)
+    var dateString = newDate.toLocaleDateString()
+    return dateString.replace('/', '-').replace('/', '-')
+  }
+  module.exports.formatDate = formatDate
+</wxs>
 <navbar bgColor="#fff">
   <view slot="title">
     <view class="switch-wrap">
@@ -22,12 +31,14 @@
 <!-- <divider>第一章</divider> -->
 <view class="text-card" wx:for="{{notes}}">
   <view class="text">
-    {{item.note}}
+    <text wx:if="{{item.experience}}" class="text-experience">{{item.experience}}</text>
+    <text class="text-note">{{item.note}}</text>
   </view>
   <view class="text-info">
     <view class="position">
       <text wx:if="{{item.position}}">第{{item.position}}页</text>
     </view>
-    <view class="date">{{item.date.$date}}</view>
+    <view class="date">{{module.formatDate(item.create_date)}}</view>
   </view>
 </view>
+<add-btn book="{{book}}"></add-btn>

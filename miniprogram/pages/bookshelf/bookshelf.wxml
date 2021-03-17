@@ -48,5 +48,3 @@
     <view class="tag">编程</view>
   </view>
 </scroll-view>
-
-<add-btn></add-btn>
