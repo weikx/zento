@@ -1,16 +1,16 @@
 /**app.wxss**/
-@import "/assets/fonts/iconfont.wxss";
-@import "/assets/styles/animate.min.wxss";
+@import '/assets/fonts/iconfont.wxss';
+@import '/assets/styles/animate.min.wxss';
 @font-face {
   font-family: myFontOne;
   src: url('https://static.sagool.com/%E6%9D%A8%E4%BB%BB%E4%B8%9C%E7%AB%B9%E7%9F%B3%E4%BD%93.ttf');
 }
 page {
-  font-family: myFontOne;
-  background: #F8F8F8;
-  --theme-color-: #F9B198;
+  font-family: myFontOne, Arial, Helvetica, sans-serif;
+  background: #f8f8f8;
+  --theme-color-: #f9b198;
   --main-text-color-: #333333;
   --sub-text-color-: #777777;
-  --desc-text-color-: #CCCCCC;
-  --page-bg-color-: #F8F8F8;
+  --desc-text-color-: #cccccc;
+  --page-bg-color-: #f8f8f8;
 }

@@ -11,8 +11,12 @@
 <navbar bgColor="#fff">
   <view slot="title">
     <view class="switch-wrap">
-      <view class="switch">时间</view>
-      <view class="switch checked">页码</view>
+      <view class="switch {{orderBy == 'create_date' ? 'checked' : ''}}" bindtap="switchOrder" data-order="create_date">
+        时间
+      </view>
+      <view class="switch {{orderBy == 'position' ? 'checked' : ''}}" bindtap="switchOrder" data-order="position">
+        页码
+      </view>
     </view>
   </view>
 </navbar>
@@ -29,7 +33,7 @@
   </view>
 </view>
 <!-- <divider>第一章</divider> -->
-<view class="text-card" wx:for="{{notes}}">
+<view class="text-card" wx:for="{{notes}}" wx:key="_id">
   <view class="text">
     <text wx:if="{{item.experience}}" class="text-experience">{{item.experience}}</text>
     <text class="text-note">{{item.note}}</text>
@@ -42,3 +46,7 @@
   </view>
 </view>
 <add-btn book="{{book}}"></add-btn>
+<view class="empty" hidden="{{empty}}">
+  <image class="empty-img" src="./images/empty.svg" />
+  <text class="empty-text">快添加一条笔记吧~</text>
+</view>

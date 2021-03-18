@@ -1,60 +1,57 @@
-<!--miniprogram/pages/profile/profile.wxml-->
+<!-- miniprogram/pages/profile/profile.wxml -->
 <navbar bgColor="#f8f8f8" defaultType="{{false}}">
   <view slot="left">
     <view class="message-wrap">
-      <image class="message-icon" src="./icon1.svg"></image>
+      <image class="message-icon" src="./images/icon1.svg"></image>
       <text class="message-count">0</text>
     </view>
   </view>
 </navbar>
-
 <view class="user-info">
-  <image src="./avatar.svg" class="avatar"></image>
+  <image src="./images/avatar.svg" class="avatar"></image>
   <view class="user-text">
     <view class="user-name">喂鸭梨</view>
     <text class="bio">士欲宣其义,必先读其书。</text>
   </view>
 </view>
-
 <view class="statistic-wrap">
   <view class="statistic-item">
-    <view class="statistic-count">86</view>
-    <view class="statistic-desc">摘录条数</view>
+    <view class="statistic-count">{{totalNotes}}</view>
+    <view class="statistic-desc">笔记条数</view>
   </view>
   <view class="statistic-item">
     <view class="statistic-count">6386</view>
-    <view class="statistic-desc">摘录字数</view>
+    <view class="statistic-desc">笔记字数</view>
   </view>
 </view>
-
 <view class="list-wrap">
   <navigator url="/pages/import-weread/import-weread">
     <view class="list-item">
-      <image src="./icon2.svg" class="list-icon"></image>
+      <image src="./images/icon2.svg" class="list-icon"></image>
       <text class="list-text">导入微信读书笔记</text>
     </view>
   </navigator>
   <navigator url="/pages/invite/invite">
     <view class="list-item">
-      <image src="./icon3.svg" class="list-icon"></image>
+      <image src="./images/icon3.svg" class="list-icon"></image>
       <text class="list-text">邀请好友</text>
     </view>
   </navigator>
   <navigator url="/pages/help/help">
     <view class="list-item">
-      <image src="./icon4.svg" class="list-icon"></image>
+      <image src="./images/icon4.svg" class="list-icon"></image>
       <text class="list-text">使用帮助</text>
     </view>
   </navigator>
   <button open-type="feedback">
     <view class="list-item">
-      <image src="./icon5.svg" class="list-icon"></image>
+      <image src="./images/icon5.svg" class="list-icon"></image>
       <text class="list-text">意见反馈</text>
     </view>
   </button>
   <navigator url="/pages/about/about">
     <view class="list-item">
-      <image src="./icon6.svg" class="list-icon"></image>
+      <image src="./images/icon6.svg" class="list-icon"></image>
       <text class="list-text">关于我们</text>
     </view>
   </navigator>

@@ -29,6 +29,12 @@ Page({
   },
 
   publish() {
+    console.log({
+      book_title: this.data.book.title,
+      note: this.data.note,
+      experience: this.data.experience,
+      position: this.data.position
+    })
     database
       .add('notes', {
         book_title: this.data.book.title,
@@ -37,6 +43,7 @@ Page({
         position: this.data.position
       })
       .then(res => {
+        console.log(res)
         wx.showToast({
           title: '添加成功~',
           icon: 'none'
